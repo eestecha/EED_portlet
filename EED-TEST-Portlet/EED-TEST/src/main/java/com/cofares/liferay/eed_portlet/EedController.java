@@ -1,5 +1,6 @@
 package com.cofares.liferay.eed_portlet;
 
+import com.cofares.liferay.eed_portlet.clases.EedGrid;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 
@@ -24,6 +25,11 @@ public class EedController {
 		
 		System.out.println( "**** EedController.view(...)" );
 		
+		EedGrid grid = new EedGrid();
+		grid.precargar( 15 );
+
+		request.setAttribute("oGrid", grid);
+
 //		PortletPreferences prefs = request.getPreferences();
 //		modelMap.addAttribute(BuscadorHomeConstantes.PORTLET_PREFERENCES.ENLACE_FORM_CATALOGO, prefs.getValue(BuscadorHomeConstantes.PORTLET_PREFERENCES.ENLACE_FORM_CATALOGO, ""));
 //		modelMap.addAttribute(BuscadorHomeConstantes.PORTLET_PREFERENCES.ENLACE_CATALOGO, prefs.getValue(BuscadorHomeConstantes.PORTLET_PREFERENCES.ENLACE_CATALOGO, ""));
