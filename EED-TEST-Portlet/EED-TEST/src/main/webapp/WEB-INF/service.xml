@@ -65,7 +65,7 @@
             <!-- Order -->
 
             <order by="asc">
-                    <order-column name="name" order-by="asc" case-sensitive="true"/>
+                    <order-column name="name" order-by="asc" case-sensitive="false"/>
             </order>
 
             <!-- Finder methods -->
