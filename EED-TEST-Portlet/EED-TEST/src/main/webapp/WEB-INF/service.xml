@@ -30,7 +30,7 @@
             <!-- Order -->
 
             <order by="asc">
-                    <order-column name="date" />
+                    <order-column name="date" order-by="asc"/>
             </order>
 
             <!-- Finder methods -->
