@@ -4,7 +4,13 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <property name="context-root" value="EED-TEST"/>
-        <property name="java-output-path" value="/EED-TEST/target/classes"/>
+        <dependent-module archiveName="canal-utils-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/canal-utils/canal-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="catalogue-portlet-service-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/catalogue-portlet-service/catalogue-portlet-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/EED-TEST-portlet/target/classes"/>
+        <property name="context-root" value="EED-TEST-portlet"/>
     </wb-module>
 </project-modules>
