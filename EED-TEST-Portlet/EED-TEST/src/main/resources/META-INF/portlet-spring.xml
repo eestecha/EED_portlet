@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.cofares.ejemplo.eventlisting.service.EventLocalService" class="com.cofares.ejemplo.eventlisting.service.impl.EventLocalServiceImpl" />
+	<bean id="com.cofares.ejemplo.eventlisting.service.EventService" class="com.cofares.ejemplo.eventlisting.service.impl.EventServiceImpl" />
+	<bean id="com.cofares.ejemplo.eventlisting.service.persistence.EventPersistence" class="com.cofares.ejemplo.eventlisting.service.persistence.EventPersistenceImpl" parent="basePersistence" />
+	<bean id="com.cofares.ejemplo.eventlisting.service.LocationLocalService" class="com.cofares.ejemplo.eventlisting.service.impl.LocationLocalServiceImpl" />
+	<bean id="com.cofares.ejemplo.eventlisting.service.LocationService" class="com.cofares.ejemplo.eventlisting.service.impl.LocationServiceImpl" />
+	<bean id="com.cofares.ejemplo.eventlisting.service.persistence.LocationPersistence" class="com.cofares.ejemplo.eventlisting.service.persistence.LocationPersistenceImpl" parent="basePersistence" />
+</beans>
